@@ -29,6 +29,7 @@ create table municipalidad(
     
     constraint idMunicipalidad primary key(idMunicipalidad)
 );
+
 select * from municipalidad;
 INSERT INTO municipalidad(nombre) VALUES('General Pueyrredon');
 INSERT INTO municipalidad(nombre) VALUES('General Alvarado');
@@ -46,6 +47,8 @@ INSERT INTO empleado(nombre,apellido,telefono,email,salario,inicioActividades,id
 INSERT INTO empleado(nombre,apellido,telefono,email,salario,inicioActividades,idPuestoLaboral,idMunicipalidad) VALUES('Marcos','Arribas','222222222','marcosarribas@email.com',12500.50,'1990-10-05',2,3);
 INSERT INTO empleado(nombre,apellido,telefono,email,salario,inicioActividades,idPuestoLaboral,idMunicipalidad) VALUES('Antonio','Langone','333333333','antoniolangone@email.com',14500.50,'1994-04-09',3,4);
 INSERT INTO empleado(nombre,apellido,telefono,email,salario,inicioActividades,idPuestoLaboral,idMunicipalidad) VALUES('Lucas','Diaz','444444444','lucasdiaz@email.com',16500.50,'1997-01-25',4,2);
+
+//con el siguiente script se obtienen los resultados deseados:
 
 select e.nombre, e.apellido, e.telefono, e.email, e.salario, e.inicioActividades, pl.nombre as 'Puesto Laboral', m.nombre as 'Municipalidad' 
 from puestoLaboral pl
