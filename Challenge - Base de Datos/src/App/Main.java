@@ -34,7 +34,7 @@ public class Main {
 		empleadoDAO.EmpleadosXSalarioYAntiguedadMinMax(ObtenerEmpleados);
 	}
 	
-	public void cargarDatosFictifios() {
+	public static void cargarDatosFictifios() {
 		//aplicacion de consola para llenar las tablas con datos ficticios
 		String script = null;
 		
