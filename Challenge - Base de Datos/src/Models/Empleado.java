@@ -13,6 +13,25 @@ public class Empleado {
     private Date inicioActividades;
     private int idPuestoLaboral;
     private int dMunicipalidad;
+    
+    private String municipalidad;
+    public String getMunicipalidad() {
+		return municipalidad;
+	}
+
+	public void setMunicipalidad(String municipalidad) {
+		this.municipalidad = municipalidad;
+	}
+
+	public String getPuestoLaboral() {
+		return puestoLaboral;
+	}
+
+	public void setPuestoLaboral(String puestoLaboral) {
+		this.puestoLaboral = puestoLaboral;
+	}
+
+	private String puestoLaboral;
 	
     public Empleado(int idEmpleado, String nombre, String apellido, String telefono, String email, float salario,
 			Date inicioActividades, int idPuestoLaboral, int dMunicipalidad) {
@@ -37,6 +56,19 @@ public class Empleado {
 		this.inicioActividades = null;
 		this.idPuestoLaboral = 0;
 		this.dMunicipalidad = 0;
+	}
+    
+    @Override
+	public String toString() {
+		return "Empleado [idEmpleado=" + idEmpleado + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono="
+				+ telefono + ", email=" + email + ", salario=" + salario + ", inicioActividades=" + inicioActividades
+				+ ", idPuestoLaboral=" + idPuestoLaboral + ", dMunicipalidad=" + dMunicipalidad + "]";
+	}
+    
+    public String toString1() {
+		return "Empleado [nombre=" + nombre + ", apellido=" + apellido + ", telefono="
+				+ telefono + ", email=" + email + ", salario=" + salario + ", inicioActividades=" + inicioActividades
+				+ ", PuestoLaboral=" + puestoLaboral + ", municipalidad=" + municipalidad + "]";
 	}
 
 	public int getIdEmpleado() {
@@ -103,11 +135,11 @@ public class Empleado {
 		this.idPuestoLaboral = idPuestoLaboral;
 	}
 
-	public int getdMunicipalidad() {
+	public int getIdMunicipalidad() {
 		return dMunicipalidad;
 	}
 
-	public void setdMunicipalidad(int dMunicipalidad) {
+	public void setIdMunicipalidad(int dMunicipalidad) {
 		this.dMunicipalidad = dMunicipalidad;
 	}
 }

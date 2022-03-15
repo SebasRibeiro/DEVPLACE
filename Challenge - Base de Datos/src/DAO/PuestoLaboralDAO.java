@@ -1,37 +1,28 @@
-package Conexion;
+package DAO;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
-import Models.Municipalidad;
+import Conexion.ConexionBDD;
+import Models.PuestoLaboral;
 
-public class TestConexion {
-
-	public static void scriptSQL(String script) {
+public class PuestoLaboralDAO  {
+	
+	public static void InsertarDatosPred(String script) {
 		
 		ConexionBDD conexion = new ConexionBDD();
 		Connection cn = null;
 		Statement stm = null;
 		ResultSet rs = null;
-		
-		Municipalidad muni = new Municipalidad();
-		
+	
 		try {
 			cn = conexion.Conectar();
 			stm = cn.createStatement();
 			rs = stm.executeQuery(script);
-			
-			
-			while(rs.next()) {
-					int idMunicipalidad = rs.getInt(1);
-					String nombre = rs.getString(2);
-					System.out.println(idMunicipalidad+ " . "+nombre);
-				
-				
-			}
-			
+		
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
@@ -49,7 +40,6 @@ public class TestConexion {
 				e2.printStackTrace();
 			}
 		}
-		
 	}
 
 }

@@ -1,7 +1,7 @@
 package Models;
 
 public class PuestoLaboral {
-	
+
 	private int idPuestoLaboral;
     private String nombre;
     
