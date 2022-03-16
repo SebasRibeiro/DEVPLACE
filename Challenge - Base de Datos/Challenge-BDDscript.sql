@@ -99,7 +99,7 @@ CREATE PROCEDURE insertarPuestoLaboral(IN pNombre varchar(150))
 BEGIN 
 INSERT INTO puestoLaboral(nombre) VALUES(pNombre);
 END; $$
-CALL insertarPuestoLaboral('Pinamar');
+CALL insertarPuestoLaboral('Secretario');
 select * from puestoLaboral;
 
 DELIMITER $$
